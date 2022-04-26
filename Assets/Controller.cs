@@ -2,18 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Driver : MonoBehaviour
+public class Controller : MonoBehaviour
 {
     [SerializeField] float steerSpeed = 200.0f;
     [SerializeField] float moveSpeed = 15.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         float steerAmount = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
